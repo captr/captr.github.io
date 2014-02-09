@@ -18,3 +18,34 @@
 @import "neat/neat";
 
 // MARKER LINE --> /////////////////////////////////////////////////////////////
+
+$base-link-color: $base-font-color;
+$hover-link-color: $base-font-color;
+
+// TODO: This shouldn't be here, but for some reason overriding values above
+// didn't suffice, so I had to copy this stuff from bitters/_typography.scss
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+body {
+    padding-top: golden-ratio($gutter, 2);
+    text-align: center;
+}
+
+#slogan {
+    font-family: "ff-enzo-web";
+    font-size: golden-ratio($base-font-size, 3);
+    line-height: golden-ratio($base-line-height, 0);
+}

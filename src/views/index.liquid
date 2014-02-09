@@ -1,3 +1,18 @@
+{% block title %}Captr{% endblock %}
+
 {% block content %}
-    <!-- TODO: Make a dent in the universe! -->
+    <div id="logo">
+        {{ "captr-logo.png" | asset_url | image_tag: 'Captr Logo' }}
+    </div>
+
+    <div id="slogan">
+        <p><a href="https://github.com/captr">
+            Craft, publish and distribute<br />great learning videos.
+        </a></p>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="//use.typekit.net/tbo8jne.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 {% endblock %}
